@@ -1,0 +1,9 @@
+torch
+transformers
+matplotlib
+numpy
+hydra-code
+wandb
+scipy
+hydra-optuna-sweeper
+numpy

@@ -1,2 +1,2 @@
-from attention_evaluation.aggregation import aggregate_attention, evaluate_attention
-from attention_evaluation.visualization import visualize_attention
+from attention_evaluation.aggregation import aggregate_attention, evaluate_attention, evaluate_attention_prediction_correlation, compare_attention_runs, compute_percentages, analyze_error_positions
+from attention_evaluation.visualization import visualize_attention, visualize_scores_on_reference_map

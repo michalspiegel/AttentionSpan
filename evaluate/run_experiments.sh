@@ -1,0 +1,12 @@
+python evaluate_transformers_model.py --config-name finetune_llama_instruct_string_reversal.yaml training=null model.load_from_checkpoint=True model.is_pretrained=False
+python evaluate_transformers_model.py --config-name train_llama_instruct_string_reversal.yaml training=null model.load_from_checkpoint=True model.is_pretrained=False
+python evaluate_transformers_model.py --config-name finetune_llama_instruct_successor.yaml training=null model.load_from_checkpoint=True model.is_pretrained=False
+python evaluate_transformers_model.py --config-name train_llama_instruct_successor.yaml training=null model.load_from_checkpoint=True model.is_pretrained=False
+python evaluate_transformers_model.py --config-name finetune_llama_instruct_value_assignment.yaml training=null model.load_from_checkpoint=True model.is_pretrained=False
+python evaluate_transformers_model.py --config-name train_llama_instruct_value_assignment.yaml training=null model.load_from_checkpoint=True model.is_pretrained=False
+python evaluate_transformers_model.py --config-name finetune_llama_instruct_flip_flop.yaml training=null model.load_from_checkpoint=True model.is_pretrained=False
+python evaluate_transformers_model.py --config-name train_llama_instruct_flip_flop.yaml training=null model.load_from_checkpoint=True model.is_pretrained=False
+python evaluate_transformers_model.py --config-name finetune_llama_instruct_addition.yaml training=null model.load_from_checkpoint=True model.is_pretrained=False
+python evaluate_transformers_model.py --config-name train_llama_instruct_addition.yaml training=null model.load_from_checkpoint=True model.is_pretrained=False
+python evaluate_transformers_model.py --config-name finetune_llama_instruct_multiplication.yaml training=null model.load_from_checkpoint=True model.is_pretrained=False
+python evaluate_transformers_model.py --config-name train_llama_instruct_multiplication.yaml training=null model.load_from_checkpoint=True model.is_pretrained=False

@@ -1,0 +1,68 @@
+# configs/transfomers_config.yaml
+defaults:
+  - _self_
+
+wandb:
+  project: algorithmic_reasoning
+  name: llama_1B_instruct_value_assign_5_5_10_50_10_20_trained
+
+model:
+  name: meta-llama/Llama-3.2-1B-Instruct
+  load_from_checkpoint: False
+  checkpoint_filepath: checkpoints/llama_instruct_value_assign_trained.weights
+  is_pretrained: False
+  model_configuration:
+    attention_probs_dropout_prob: 0.0
+    hidden_dropout_prob: 0.0
+
+training:
+  epochs: 1
+  batch_size: 4
+  learning_rate: 5e-6
+  device: cuda
+  ignore_index: -100
+  save_checkpoint: True
+  checkpoint_filepath: checkpoints/llama_instruct_value_assign_trained.weights
+  optimizer_parameters:
+    beta1: 0.95
+    beta2: 0.999
+  train_dataset:
+    generator: ValueAssignmentGenerator
+    generator_parameters:
+      seed: 0
+      length: ${as_tuple:1,5}
+      encoding_length: ${as_tuple:1,5}
+      generate_attn_labels: False
+    num_samples: 6000
+  val_dataset:
+    generator: ValueAssignmentGenerator
+    generator_parameters:
+      seed: 0
+      length: ${as_tuple:1,20}
+      encoding_length: ${as_tuple:1,10}
+      generate_attn_labels: False
+    num_samples: 100
+
+
+evaluation:
+  device: cuda
+  batch_size: 16
+  visualize: False
+  name: llama_1B_instruct_value_assign_trained
+  dataset1:
+    num_samples: 100
+    generator: ValueAssignmentGenerator
+    generator_parameters:
+      seed: 42
+      length: ${as_tuple:1,5}
+      encoding_length: ${as_tuple:1,5}
+  dataset2:
+    num_samples: 500
+    generator: ValueAssignmentGenerator
+    generator_parameters:
+      seed: 42
+      length: ${as_tuple:10,50}
+      encoding_length: ${as_tuple:10,20}
+
+
+  

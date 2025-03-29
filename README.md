@@ -43,5 +43,21 @@ All of these analysis tool are currently used when calling the `evaluate/evaluat
     - This tries to estimate how much the model attends the tokens we expect him to attend
 - mean proportion attention score on reference tokens given correct/incorrect prediction
     - These 2 scores try to estimate whether there's a significant change in attention reference tokens when the model makes incorrect prediction (vs. correct prediction)
-- statistical tests on these means to estimate the statistical significance 
+- statistical tests on these means to estimate the statistical significance
+
+## Citation
+
+If you find the paper or the source code useful to your projects, please cite the following bibtex:
+
+```
+@misc{spiegel2025attendperishbenchmarkingattention,
+      title={Attend or Perish: Benchmarking Attention in Algorithmic Reasoning}, 
+      author={Michal Spiegel and Michal Štefánik and Marek Kadlčík and Josef Kuchař},
+      year={2025},
+      eprint={2503.01909},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2503.01909}, 
+}
+```
 
